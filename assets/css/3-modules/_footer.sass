@@ -1,0 +1,39 @@
+footer
+	background: url(../img/bg_header_1.jpg) center center
+	background-size: cover
+	
+	
+	.lockup
+		padding: 30px
+		+clearfix
+	
+		.logo
+			+size(50px)
+			float: left
+			margin-right: 30px
+			
+			path
+				fill: rgba(0,0,0,0.3)
+			
+		.wrap_content
+			float: left
+			
+			nav		
+				a
+					color: rgba(0,0,0,0.7)
+					@extend %small-bold
+					margin-right: 20px
+					display: inline-block
+					letter-spacing: 0.05em
+						
+					&:hover
+						color: rgba(0,0,0,1) 
+						
+			.copyright
+				text-transform: uppercase
+				color: rgba(0,0,0,0.4)
+				font-size: 12px
+		
+		
+		
+	
