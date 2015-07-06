@@ -227,8 +227,9 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 header {
-  background-color: #ccc;
-  height: 450px; }
+  background: url(../img/bg_header_1.jpg) center center;
+  height: 450px;
+  background-size: cover; }
   header .logo {
     background-color: #999;
     height: 50px;
