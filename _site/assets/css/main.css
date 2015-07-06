@@ -149,7 +149,7 @@ td, th {
   src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #bd5248;
+  color: #BD5248;
   font-weight: bold; }
 
 .gigantic {
@@ -188,14 +188,14 @@ strong {
   font-weight: bold; }
 
 hr {
-  border: solid #dddddd;
+  border: solid #ddd;
   border-width: 1px 0 0;
   clear: both;
   margin: 10px 0 30px;
   height: 0; }
 
 a {
-  color: #bd5248;
+  color: #BD5248;
   text-decoration: none;
   outline: 0; }
 
@@ -203,10 +203,10 @@ a:hover, a:focus {
   color: #d89993; }
 
 ::selection {
-  background: #fff498; }
+  background: #FFF498; }
 
 ::-moz-selection {
-  background: #fff498; }
+  background: #FFF498; }
 
 img::selection {
   background: transparent; }
@@ -215,13 +215,57 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #fff498; }
+  -webkit-tap-highlight-color: #FFF498; }
 
 body {
-  background: #f6f6f8;
+  background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Open Sans" sans-serif;
-  color: #2e2d33;
+  color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+header {
+  background-color: #ccc;
+  height: 450px; }
+  header .logo {
+    background-color: #999;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 10px 0 0 40px; }
+    header .logo path {
+      fill: rgba(0, 0, 0, 0.4); }
+  header nav {
+    float: right;
+    margin: 30px 40px 0 0; }
+    header nav a {
+      margin-left: 20px;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em; }
+      header nav a:hover {
+        color: black; }
+  header h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    clear: both;
+    padding-top: 110px;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; }
+    header h1 span {
+      display: inline-block;
+      border: 10px solid white;
+      padding: 0.05em 0.2em; }
+  header .kicker {
+    line-height: 1;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; }
