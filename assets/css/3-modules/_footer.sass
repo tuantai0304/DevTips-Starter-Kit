@@ -1,22 +1,18 @@
 footer
-	background: url(../img/bg_header_1.jpg) center center
-	background-size: cover
+	background: url(../img/logo.svg ) no-repeat, url(../img/bg_header_1.jpg)
+	background-size: 50px 50px, cover
+	background-position: 70px 55px, 50% 50%
+	background-blend-mode: overlay, normal
 	
 	
 	.lockup
 		padding: 30px
 		+clearfix
 	
-		.logo
-			+size(50px)
-			float: left
-			margin-right: 30px
-			
-			path
-				fill: rgba(0,0,0,0.3)
 			
 		.wrap_content
 			float: left
+			margin: 30px 0 0 130px
 			
 			nav		
 				a
