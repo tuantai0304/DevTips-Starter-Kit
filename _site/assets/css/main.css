@@ -231,6 +231,9 @@ header nav a, header .kicker, footer .lockup .wrap_content nav a, h3 {
   font-weight: 700;
   text-transform: uppercase; }
 
+.skill_lockup .skill_icon.skill_0 span:nth-child(n+1), .skill_lockup .skill_icon.skill_1 span:nth-child(n+2), .skill_lockup .skill_icon.skill_2 span:nth-child(n+3), .skill_lockup .skill_icon.skill_3 span:nth-child(n+4), .skill_lockup .skill_icon.skill_4 span:nth-child(n+5), .skill_lockup .skill_icon.skill_5 span:nth-child(n+6), .skill_lockup .skill_icon.skill_6 span:nth-child(n+7), .skill_lockup .skill_icon.skill_7 span:nth-child(n+8), .skill_lockup .skill_icon.skill_8 span:nth-child(n+9), .skill_lockup .skill_icon.skill_9 span:nth-child(n+10), .skill_lockup .skill_icon.skill_10 span:nth-child(n+11) {
+  background: #e5eaee; }
+
 header {
   background: url(../img/bg_header_1.jpg) center center;
   height: 450px;
@@ -373,3 +376,36 @@ h3 {
       margin: 0 auto 30px; }
     .face_lockup [class^="icon_"] {
       margin: 10px; } }
+.skill_lockup {
+  max-width: 540px;
+  margin: 100px auto;
+  color: #999; }
+  .skill_lockup:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .skill_lockup .skill_unit {
+    width: 270px;
+    float: left; }
+  .skill_lockup .skill_icon {
+    font-size: 0;
+    margin: 3px 0 30px; }
+    .skill_lockup .skill_icon span {
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      background-color: #c99065;
+      margin-right: 8px;
+      border-radius: 50%; }
+      .skill_lockup .skill_icon span:after {
+        content: "";
+        display: block;
+        height: 10px;
+        width: 10px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 2px; }
+
+@media screen and (max-width: 540px) {
+  .skill_lockup {
+    width: 270px; } }
