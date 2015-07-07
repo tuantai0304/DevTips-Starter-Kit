@@ -1,0 +1,67 @@
+h3
+	@extend %small-bold
+	color: $accent-light
+	text-align: center
+	margin: 100px 0 30px
+	
+.face_lockup
+	max-width: 780px
+	+display(flex)
+	margin: 0 auto
+	+align-items(center)
+	+justify-content(space-around)
+	
+	.face_img
+		background: url(../img/face.jpg)
+		+size(200px)
+		border-radius: 50%
+		order: 3
+		
+		
+	[class^="icon_"]		
+		background-color: $bg-color-grey
+		border-radius: 50%
+		
+		path
+			fill: $accent
+			
+		&.icon_pencil
+			order: 1
+			
+		&.icon_mouse
+			order: 2
+		
+		&.icon_browser
+			order: 4
+			
+		&.icon_video
+			order: 5
+	
+.blurb
+	max-width: 620px
+	margin: 60px auto
+	text-align: center
+	font-size: 24px
+	font-weight: 300
+	// When in mobile text will not touch screen
+	padding: 0 15px
+	
+@media screen and (max-width: 650px)
+	.face_lockup
+		display: block
+		text-align: center
+		
+		div
+			display: inline-block
+		
+		.face_img
+			display: block
+			background-position: center center
+			margin: 0 auto 30px
+		
+		[class^="icon_"]	
+			margin: 10px
+			
+		
+			
+	
