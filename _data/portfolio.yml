@@ -15,10 +15,10 @@ blurb: <p><strong>In pellentesque faucibus vestibulum.</strong> Nulla at nulla j
 
 # MENU ITEM LIST
 menus:
-- {name:"about", url: "#about"}
-- {name:"work", url: "#work"}
-- {name:"clients", url: "#clients"}
-- {name:"contact", url: "#contact"}
+- {name: "about", url: "#about"}
+- {name: "work", url: "#work"}
+- {name: "clients", url: "#clients"}
+- {name: "contact", url: "#contact"}
 
 # SKILL LIST
 
