@@ -1,16 +1,8 @@
 header
-	background: url(../img/bg_header_1.jpg) center center
+	@extend %bg-overlay-effect
 	height: 450px
-	background-size: cover
+	background-position: 30px 20px, 50% 50%
 	
-	.logo
-		+size(50px)
-		float: left
-		margin: 10px 0 0 40px
-		
-		path
-			fill: rgba(0,0,0,0.4)
-		
 	nav
 		float: right
 		margin: 30px 40px 0 0

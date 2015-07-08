@@ -226,7 +226,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-header nav a, header .kicker, footer .lockup .wrap_content nav a, h3 {
+h3 {
+  color: #e1c185;
+  text-align: center;
+  margin: 100px 0 30px; }
+
+h3, header nav a, header .kicker, footer .lockup .wrap_content nav a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -234,17 +239,15 @@ header nav a, header .kicker, footer .lockup .wrap_content nav a, h3 {
 .skill_lockup .skill_icon.skill_0 span:nth-child(n+1), .skill_lockup .skill_icon.skill_1 span:nth-child(n+2), .skill_lockup .skill_icon.skill_2 span:nth-child(n+3), .skill_lockup .skill_icon.skill_3 span:nth-child(n+4), .skill_lockup .skill_icon.skill_4 span:nth-child(n+5), .skill_lockup .skill_icon.skill_5 span:nth-child(n+6), .skill_lockup .skill_icon.skill_6 span:nth-child(n+7), .skill_lockup .skill_icon.skill_7 span:nth-child(n+8), .skill_lockup .skill_icon.skill_8 span:nth-child(n+9), .skill_lockup .skill_icon.skill_9 span:nth-child(n+10), .skill_lockup .skill_icon.skill_10 span:nth-child(n+11) {
   background: #e5eaee; }
 
+header, footer {
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50px 50px, cover;
+  background-position: 70px 55px, 50% 50%;
+  background-blend-mode: overlay, normal; }
+
 header {
-  background: url(../img/bg_header_1.jpg) center center;
   height: 450px;
-  background-size: cover; }
-  header .logo {
-    height: 50px;
-    width: 50px;
-    float: left;
-    margin: 10px 0 0 40px; }
-    header .logo path {
-      fill: rgba(0, 0, 0, 0.4); }
+  background-position: 30px 20px, 50% 50%; }
   header nav {
     float: right;
     margin: 30px 40px 0 0; }
@@ -273,36 +276,26 @@ header {
     color: white;
     text-align: center; }
 
-footer {
-  background: url(../img/logo.svg) no-repeat, url(../img/bg_header_1.jpg);
-  background-size: 50px 50px, cover;
-  background-position: 70px 55px, 50% 50%;
-  background-blend-mode: overlay, normal; }
-  footer .lockup {
-    padding: 30px; }
-    footer .lockup:after {
-      content: "";
-      display: table;
-      clear: both; }
-    footer .lockup .wrap_content {
-      float: left;
-      margin: 30px 0 0 130px; }
-      footer .lockup .wrap_content nav a {
-        color: rgba(0, 0, 0, 0.7);
-        margin-right: 20px;
-        display: inline-block;
-        letter-spacing: 0.05em; }
-        footer .lockup .wrap_content nav a:hover {
-          color: black; }
-      footer .lockup .wrap_content .copyright {
-        text-transform: uppercase;
-        color: rgba(0, 0, 0, 0.4);
-        font-size: 12px; }
-
-h3 {
-  color: #e1c185;
-  text-align: center;
-  margin: 100px 0 30px; }
+footer .lockup {
+  padding: 30px; }
+  footer .lockup:after {
+    content: "";
+    display: table;
+    clear: both; }
+  footer .lockup .wrap_content {
+    float: left;
+    margin: 30px 0 0 130px; }
+    footer .lockup .wrap_content nav a {
+      color: rgba(0, 0, 0, 0.7);
+      margin-right: 20px;
+      display: inline-block;
+      letter-spacing: 0.05em; }
+      footer .lockup .wrap_content nav a:hover {
+        color: black; }
+    footer .lockup .wrap_content .copyright {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 12px; }
 
 .face_lockup {
   max-width: 780px;
@@ -333,7 +326,6 @@ h3 {
   justify-content: space-around;
   -ms-flex-pack: center; }
   .face_lockup .face_img {
-    background: url(../img/face.jpg);
     height: 200px;
     width: 200px;
     border-radius: 50%;
