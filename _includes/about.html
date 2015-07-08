@@ -3,7 +3,7 @@
 	<h3 id="about">About myself</h3>
 	
 	<div class="face_lockup">
-		<div class="face_img" style="background: url(/assets/img/{{ site.avatar }});"></div>
+		<div class="face_img" style="background: url(/assets/img/{{ site.data.portfolio.avatar }});"></div>
 		
 		<div class="icon_pencil">{% include icons/icon_pencil.html %}</div>
 		<div class="icon_video">{% include icons/icon_video.html %}</div>
@@ -20,69 +20,18 @@
 	</div>
 	
 	<div class="skill_lockup">
-		<div class="skill_unit">
-			<div class="skill_lable">Communication</div>
-			<div class="skill_icon skill_8">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
 		
-		<div class="skill_unit">
-			<div class="skill_lable">Learning</div>
-			<div class="skill_icon skill_0">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
+		{% for skill in site.data.portfolio.skills %}
 		
-		<div class="skill_unit">
-			<div class="skill_lable">Planning</div>
-			<div class="skill_icon skill_7">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
+			<div class="skill_unit">
+				<div class="skill_lable">{{ skill.name }}</div>
+				<div class="skill_icon skill_{{skill.value}}">
+					<span></span><span></span><span></span><span></span><span></span>
+					<span></span><span></span><span></span><span></span><span></span>
+				</div>
 			</div>
-		</div>
-		
-		<div class="skill_unit">
-			<div class="skill_lable">UX design</div>
-			<div class="skill_icon skill_3">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
-		
-		<div class="skill_unit">
-			<div class="skill_lable">Organization</div>
-			<div class="skill_icon skill_8">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
-		
-		<div class="skill_unit">
-			<div class="skill_lable">Teaching</div>
-			<div class="skill_icon">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
-		
-		<div class="skill_unit">
-			<div class="skill_lable">Visual design</div>
-			<div class="skill_icon skill_4">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
-		
-		<div class="skill_unit">
-			<div class="skill_lable">Programming</div>
-			<div class="skill_icon skill_9">
-				<span></span><span></span><span></span><span></span><span></span>
-				<span></span><span></span><span></span><span></span><span></span>
-			</div>
-		</div>
+			
+		{% endfor %}
 		
 	</div>
 	
