@@ -12,14 +12,16 @@ bg-logo: logo.svg
 
 blurb: <p><strong>In pellentesque faucibus vestibulum.</strong> Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus acus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et </p>
 
-
+#---------------------
 # MENU ITEM LIST
+
 menus:
 - {name: "about", url: "#about"}
 - {name: "work", url: "#work"}
 - {name: "clients", url: "#clients"}
 - {name: "contact", url: "#contact"}
 
+#---------------------
 # SKILL LIST
 
 skills:
@@ -31,3 +33,15 @@ skills:
 - {name: "Organization", value: "5"}
 - {name: "Visual Design", value: "8"}
 - {name: "Programing", value: "3"}
+
+#---------------------
+# PROJECT LIST
+projects:
+- {name: "Typo International", folder: "proj-1"}
+- {name: "American Apparel", folder: "proj-2"}
+- {name: "Crispy Icons", folder: "proj-3"}
+- {name: "Flat mobile", folder: "proj-4"}
+- {name: "Fresh it up", folder: "proj-5"}
+- {name: "Timeline page", folder: "proj-6"}
+- {name: "Typo International", folder: "proj-7"}
+- {name: "Stripes co", folder: "proj-8"}
