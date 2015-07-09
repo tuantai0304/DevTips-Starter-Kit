@@ -1,56 +1,102 @@
 .work-section
 	background: $bg-color-grey
 	padding-bottom: 100px
+	overflow-x: hidden
 	
-	.thumb-container
-		max-width: 960px
-		margin: 40px auto
-		+clearfix
+	.work-belt
+		width: 200%
+		position: relative
+		+transition(all 800ms)
 		
-		.thumb-unit
-			display: block
-			width: 25%
+		.thumb-wrap, .work-wrap
+			width: 50%
 			float: left
-			position: relative
-			padding-top: 16%
-			overflow: hidden
-			+perspective(300)
+	
+		.thumb-container
+			max-width: 960px
+			margin: 40px auto
+			+clearfix
 			
-			background:
-				size: cover
-				position: center center
-				repeat: no-repeat
+			.thumb-unit
+				display: block
+				width: 25%
+				float: left
+				position: relative
+				padding-top: 16%
+				overflow: hidden
+				+perspective(300)
 				
-			@media screen and (max-width: 760px)
-				width: 50%
-				padding-top: 30%
-				
-			.thumb-overlay
-				+position(absolute, 100% 0 null 0)
-				height: 100%
-				background: fade-out($accent, 0.2)
-				text-align: center
-				+transition
-				+display(flex)
-				+justify-content(space-around)
-				+flex-direction(column)
-				
-				strong
-					padding: 0 20px
-					display: block
-					font-weight: 300
-					font-size: 24px
-					text-transform: uppercase
-					line-height: 1.2em
+				background:
+					size: cover
+					position: center center
+					repeat: no-repeat
 					
-				.magnify
-					path
-						fill: rgba(255, 255, 255, 1)
-				
-			&:hover 
+				@media screen and (max-width: 760px)
+					width: 50%
+					padding-top: 30%
+					
 				.thumb-overlay
-					top: 0
-					@extend %animation-target
+					+position(absolute, 100% 0 null 0)
+					height: 100%
+					background: fade-out($accent, 0.2)
+					text-align: center
+					+transition
+					+display(flex)
+					+justify-content(space-around)
+					+flex-direction(column)
+					
+					strong
+						color: white
+						padding: 0 20px
+						display: block
+						font-weight: 300
+						font-size: 24px
+						text-transform: uppercase
+						line-height: 1.2em
+						
+					.magnify
+						path
+							fill: rgba(255, 255, 255, 1)
+					
+				&:hover 
+					.thumb-overlay
+						top: 0
+						@extend %animation-target
+		
+		
+		.work-container
+			max-width: 600px
+			margin: 0px auto
+			position: relative
+			display: none
+			
+			img
+				max-width: 100%
+				margin-bottom: 20px
+			
+			h4
+				color: $accent
+				font-weight: 300
+				font-size: 24px
+				text-transform: uppercase
+				line-height: 1.2em
+				
+			.work-return
+				+size(40px)
+				+position(absolute, null null null -60px)
+				cursor: pointer
+				
+				path
+					fill: rgba(0, 0, 0, 0.4)
+					
+				&:hover
+					opacity: 0.6
+				
+				 
+				 
+				
+		
+		
 					
 					
 				

@@ -147,7 +147,7 @@ td, th {
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
-.work-section .thumb-container .thumb-unit:hover .thumb-overlay {
+.work-section .work-belt .thumb-container .thumb-unit:hover .thumb-overlay {
   -webkit-animation: animation 1s linear infinite both;
   animation: animation 1s linear infinite both; }
 
@@ -555,73 +555,108 @@ footer .lockup {
     width: 270px; } }
 .work-section {
   background: #e5eaee;
-  padding-bottom: 100px; }
-  .work-section .thumb-container {
-    max-width: 960px;
-    margin: 40px auto; }
-    .work-section .thumb-container:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .work-section .thumb-container .thumb-unit {
-      display: block;
-      width: 25%;
-      float: left;
+  padding-bottom: 100px;
+  overflow-x: hidden; }
+  .work-section .work-belt {
+    width: 200%;
+    position: relative;
+    -webkit-transition: all 800ms;
+    -moz-transition: all 800ms;
+    transition: all 800ms; }
+    .work-section .work-belt .thumb-wrap, .work-section .work-belt .work-wrap {
+      width: 50%;
+      float: left; }
+    .work-section .work-belt .thumb-container {
+      max-width: 960px;
+      margin: 40px auto; }
+      .work-section .work-belt .thumb-container:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .work-section .work-belt .thumb-container .thumb-unit {
+        display: block;
+        width: 25%;
+        float: left;
+        position: relative;
+        padding-top: 16%;
+        overflow: hidden;
+        -webkit-perspective: 300;
+        -moz-perspective: 300;
+        perspective: 300;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
+        @media screen and (max-width: 760px) {
+          .work-section .work-belt .thumb-container .thumb-unit {
+            width: 50%;
+            padding-top: 30%; } }
+        .work-section .work-belt .thumb-container .thumb-unit .thumb-overlay {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          height: 100%;
+          background: rgba(201, 144, 101, 0.8);
+          text-align: center;
+          -webkit-transition: all 0.15s ease-out 0s;
+          -moz-transition: all 0.15s ease-out 0s;
+          transition: all 0.15s ease-out 0s;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -moz-box-pack: center;
+          box-pack: center;
+          -webkit-justify-content: space-around;
+          -moz-justify-content: space-around;
+          -ms-justify-content: space-around;
+          -o-justify-content: space-around;
+          justify-content: space-around;
+          -ms-flex-pack: center;
+          -webkit-box-orient: vertical;
+          -moz-box-orient: vertical;
+          box-orient: vertical;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-direction: column; }
+          .work-section .work-belt .thumb-container .thumb-unit .thumb-overlay strong {
+            color: white;
+            padding: 0 20px;
+            display: block;
+            font-weight: 300;
+            font-size: 24px;
+            text-transform: uppercase;
+            line-height: 1.2em; }
+          .work-section .work-belt .thumb-container .thumb-unit .thumb-overlay .magnify path {
+            fill: white; }
+        .work-section .work-belt .thumb-container .thumb-unit:hover .thumb-overlay {
+          top: 0; }
+    .work-section .work-belt .work-container {
+      max-width: 600px;
+      margin: 0px auto;
       position: relative;
-      padding-top: 16%;
-      overflow: hidden;
-      -webkit-perspective: 300;
-      -moz-perspective: 300;
-      perspective: 300;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat; }
-      @media screen and (max-width: 760px) {
-        .work-section .thumb-container .thumb-unit {
-          width: 50%;
-          padding-top: 30%; } }
-      .work-section .thumb-container .thumb-unit .thumb-overlay {
+      display: none; }
+      .work-section .work-belt .work-container img {
+        max-width: 100%;
+        margin-bottom: 20px; }
+      .work-section .work-belt .work-container h4 {
+        color: #c99065;
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 1.2em; }
+      .work-section .work-belt .work-container .work-return {
+        height: 40px;
+        width: 40px;
         position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        height: 100%;
-        background: rgba(201, 144, 101, 0.8);
-        text-align: center;
-        -webkit-transition: all 0.15s ease-out 0s;
-        -moz-transition: all 0.15s ease-out 0s;
-        transition: all 0.15s ease-out 0s;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        box-pack: center;
-        -webkit-justify-content: space-around;
-        -moz-justify-content: space-around;
-        -ms-justify-content: space-around;
-        -o-justify-content: space-around;
-        justify-content: space-around;
-        -ms-flex-pack: center;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        box-orient: vertical;
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-direction: column; }
-        .work-section .thumb-container .thumb-unit .thumb-overlay strong {
-          padding: 0 20px;
-          display: block;
-          font-weight: 300;
-          font-size: 24px;
-          text-transform: uppercase;
-          line-height: 1.2em; }
-        .work-section .thumb-container .thumb-unit .thumb-overlay .magnify path {
-          fill: white; }
-      .work-section .thumb-container .thumb-unit:hover .thumb-overlay {
-        top: 0; }
+        left: -60px;
+        cursor: pointer; }
+        .work-section .work-belt .work-container .work-return path {
+          fill: rgba(0, 0, 0, 0.4); }
+        .work-section .work-belt .work-container .work-return:hover {
+          opacity: 0.6; }
