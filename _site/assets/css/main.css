@@ -415,6 +415,9 @@ footer .lockup {
       position: relative;
       padding-top: 16%;
       overflow: hidden;
+      -webkit-perspective: 300;
+      -moz-perspective: 300;
+      perspective: 300;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat; }
@@ -424,7 +427,7 @@ footer .lockup {
           padding-top: 30%; } }
       .work-section .thumb-container .thumb-unit .thumb-overlay {
         position: absolute;
-        top: 100%;
+        top: 0%;
         right: 0;
         left: 0;
         height: 100%;
@@ -455,7 +458,18 @@ footer .lockup {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
         flex-direction: column;
-        -ms-flex-direction: column; }
+        -ms-flex-direction: column;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        -ms-transform: rotateX(90deg);
+        -o-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: bottom;
+        -moz-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+        -o-transform-origin: bottom;
+        transform-origin: bottom;
+        opacity: 0; }
         .work-section .thumb-container .thumb-unit .thumb-overlay strong {
           padding: 0 20px;
           display: block;
@@ -466,7 +480,10 @@ footer .lockup {
         .work-section .thumb-container .thumb-unit .thumb-overlay .magnify path {
           fill: white; }
       .work-section .thumb-container .thumb-unit:hover .thumb-overlay {
-        position: absolute;
         top: 0;
-        right: 0;
-        left: 0; }
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        opacity: 1; }
