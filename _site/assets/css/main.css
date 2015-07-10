@@ -147,11 +147,7 @@ td, th {
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
-.work-section .work-belt .thumb-container .thumb-unit:hover .thumb-overlay {
-  -webkit-animation: animation 1s linear infinite both;
-  animation: animation 1s linear infinite both; }
-
-.animation-target {
+.work-section .work-belt .thumb-container .thumb-unit:hover .thumb-overlay, .client-unit.active {
   -webkit-animation: animation 1000ms linear both;
   animation: animation 1000ms linear both; }
 
@@ -695,7 +691,8 @@ footer .lockup {
           .work-section .work-belt .thumb-container .thumb-unit .thumb-overlay .magnify path {
             fill: white; }
         .work-section .work-belt .thumb-container .thumb-unit:hover .thumb-overlay {
-          top: 0; }
+          top: 0;
+          opacity: 1; }
     .work-section .work-belt .work-container {
       max-width: 600px;
       margin: 0px auto;
@@ -716,7 +713,124 @@ footer .lockup {
         position: absolute;
         left: -60px;
         cursor: pointer; }
-        .work-section .work-belt .work-container .work-return path {
-          fill: rgba(0, 0, 0, 0.4); }
+        .work-section .work-belt .work-container .work-return svg {
+          height: 100%;
+          width: 100%; }
+          .work-section .work-belt .work-container .work-return svg path {
+            fill: rgba(0, 0, 0, 0.4); }
         .work-section .work-belt .work-container .work-return:hover {
           opacity: 0.6; }
+
+.client-section {
+  position: relative; }
+
+.client-belt {
+  width: 100%;
+  position: relative; }
+
+.client-unit {
+  width: 700px;
+  margin: 20px 0 50px -350px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: none; }
+  .client-unit.active {
+    display: block; }
+  .client-unit .client-face {
+    display: inline-block;
+    text-align: center; }
+    .client-unit .client-face .client-img {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px; }
+    .client-unit .client-face .client-name {
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-bottom: 0;
+      letter-spacing: 1px; }
+    .client-unit .client-face .client-tittle {
+      opacity: 0.6;
+      font-size: 12px; }
+  .client-unit .client-comment {
+    display: inline-block;
+    width: 450px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px; }
+    .client-unit .client-comment .quote-mark {
+      position: absolute;
+      opacity: 0.3;
+      z-index: -1; }
+      .client-unit .client-comment .quote-mark path {
+        fill: #c99065; }
+
+.client-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .client-controls .previous-arrow, .client-controls .next-arrow {
+    height: 40px;
+    width: 40px; }
+    .client-controls .previous-arrow svg, .client-controls .next-arrow svg {
+      height: 100%;
+      width: 100%; }
+    .client-controls .previous-arrow:hover, .client-controls .next-arrow:hover {
+      opacity: 0.2; }
+  .client-controls .previous-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0; }
+  .client-controls .next-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0; }
+
+.client-icon-belt {
+  height: 80px;
+  width: 800px;
+  margin: 350px auto 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  position: relative; }
+  .client-icon-belt .client-icon {
+    min-width: 200px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+    .client-icon-belt .client-icon.active {
+      box-shadow: 0px 4px 0px #c99065; }

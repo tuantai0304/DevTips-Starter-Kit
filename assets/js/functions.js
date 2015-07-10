@@ -4,6 +4,7 @@ $( document ).ready(function() {
   smoothScroll(1000);
 	workBelt();
 	workLoad();
+	clientStuff();
 });
 
 function alertTest(str){
@@ -58,4 +59,22 @@ function workLoad(){
 		$('.project-content').html(spinner).load(newHTML);
 		$('.project-tittle').text(newTittle);
 	});
+}
+
+function clientStuff(){
+	$('.client-unit').first().addClass('active');
+	$('.client-icon').first().addClass('active');
+	
+	$('.client-icon').click(function(){
+		var $this = $(this),
+				$siblings = $this.parent().children(),
+				position = $siblings.index($this);
+				
+		console.log(position);
+	});
+	
+	
+	
+	
+	
 }

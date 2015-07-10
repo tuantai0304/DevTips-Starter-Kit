@@ -45,6 +45,7 @@
 					+justify-content(space-around)
 					+flex-direction(column)
 					
+					
 					strong
 						color: white
 						padding: 0 20px
@@ -61,7 +62,9 @@
 				&:hover 
 					.thumb-overlay
 						top: 0
+						opacity: 1
 						@extend %animation-target
+						
 		
 		
 		.work-container
@@ -86,8 +89,10 @@
 				+position(absolute, null null null -60px)
 				cursor: pointer
 				
-				path
-					fill: rgba(0, 0, 0, 0.4)
+				svg
+					+size(100%)
+					path
+						fill: rgba(0, 0, 0, 0.4)
 					
 				&:hover
 					opacity: 0.6
