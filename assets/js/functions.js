@@ -3,7 +3,7 @@ $( document ).ready(function() {
 	
   smoothScroll(1000);
 	workBelt();
-
+	workLoad();
 });
 
 function alertTest(str){
@@ -41,4 +41,21 @@ function workBelt(){
 		$('.work-container').hide(800);
 	});
 	
+}
+
+function workLoad(){
+	
+	$.ajax({cache: true});
+	
+	$('.thumb-unit').click(function(){
+		
+		var $this = $(this);
+				newTittle=$this.find('strong').text();
+				folder = $this.data('folder');
+				spinner='<div class="loader"></div>',
+				newHTML='/work/' + folder + '.html';
+		
+		$('.project-content').html(spinner).load(newHTML);
+		$('.project-tittle').text(newTittle);
+	});
 }
