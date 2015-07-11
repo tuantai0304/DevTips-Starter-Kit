@@ -23,7 +23,6 @@ function smoothScroll(duration){
 			$('html, body').animate({
 					scrollTop: target.offset().top
 			}, duration);
-				// alertTest(target);
 		}
 		
 		
@@ -64,14 +63,17 @@ function workLoad(){
 function clientStuff(){
 	$('.client-unit').first().addClass('active');
 	$('.client-icon').first().addClass('active');
+	$('.client-nav-mobile span').first().addClass('active');
 	
-	$('.client-icon').click(function(){
+	$('.client-icon, .client-nav-mobile span').click(function(){
 		var $this = $(this),
 				$siblings = $this.parent().children(),
 				position = $siblings.index($this);
 				
 		$('.client-unit').removeClass("active").eq(position).addClass("active");
+		
 		$('.client-icon').removeClass("active");
+		$('.client-nav-mobile span').removeClass("active");
 		$this.addClass("active")
 	});
 	
@@ -87,8 +89,6 @@ function clientStuff(){
 				if (position < clientNum-1){
 					//$activeClient.removeClass("active").next().addClass("active");
 					$('.active').removeClass("active").next().addClass("active");
-					console.log($('.active').length);
-					
 				}
 				else {
 					$('.client-unit').removeClass("active").first().addClass("active");

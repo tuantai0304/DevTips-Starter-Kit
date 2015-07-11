@@ -780,6 +780,20 @@ footer .lockup {
       .client-unit .client-comment .quote-mark path {
         fill: #c99065; }
 
+.client-nav-mobile {
+  text-align: center;
+  display: none; }
+  .client-nav-mobile span {
+    display: inline-block;
+    margin-right: 10px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #e5eaee;
+    border-radius: 50%;
+    cursor: pointer; }
+    .client-nav-mobile span.active {
+      border: 2px solid #c99065; }
+
 .client-controls {
   position: absolute;
   top: 0;
@@ -844,13 +858,10 @@ footer .lockup {
 
 @media (max-width: 750px) {
   .client-icon-belt {
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    display: none; }
+
+  .client-nav-mobile {
+    display: block; }
 
   .client-controls {
     display: none; }
