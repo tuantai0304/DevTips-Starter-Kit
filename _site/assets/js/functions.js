@@ -70,10 +70,43 @@ function clientStuff(){
 				$siblings = $this.parent().children(),
 				position = $siblings.index($this);
 				
-		console.log(position);
+		$('.client-unit').removeClass("active").eq(position).addClass("active");
+		$('.client-icon').removeClass("active");
+		$this.addClass("active")
 	});
 	
-	
+	$('.next-arrow, .previous-arrow').click(function(){
+		var $this = $(this),
+				$activeClient = $('.client-belt').find('.active'),
+				position = $('.client-belt').children().index($activeClient),
+				clientNum = $('.client-unit').length;
+				//console.log(clientNum);
+				
+				
+			if($this.hasClass('next-arrow')){
+				if (position < clientNum-1){
+					//$activeClient.removeClass("active").next().addClass("active");
+					$('.active').removeClass("active").next().addClass("active");
+					console.log($('.active').length);
+					
+				}
+				else {
+					$('.client-unit').removeClass("active").first().addClass("active");
+					$('.client-icon').removeClass("active").first().addClass("active");
+					//$activeClient.removeClass("active").first().addClass('active');
+					//$('.client-belt').children().first().addClass("active");
+				}
+			}
+			else{
+				if (position == 0){
+					$('.client-unit').removeClass("active").last().addClass("active");
+					$('.client-icon').removeClass("active").last().addClass("active");
+				}
+				else
+				 $('.active').removeClass("active").prev().addClass("active");
+			}
+				
+	});
 	
 	
 	

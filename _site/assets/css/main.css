@@ -816,6 +816,15 @@ footer .lockup {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-align: end;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -827,10 +836,6 @@ footer .lockup {
   -ms-flex-pack: justify;
   position: relative; }
   .client-icon-belt .client-icon {
-    min-width: 200px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
     cursor: pointer; }
     .client-icon-belt .client-icon.active {
       box-shadow: 0px 4px 0px #c99065; }
