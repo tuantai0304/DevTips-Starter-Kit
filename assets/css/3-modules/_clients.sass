@@ -5,13 +5,19 @@
 	width: 100%
 	position: relative
 	
+	
+// -------------------
+// CLIENT UNITS	
+
 .client-unit
-	width: 700px
-	margin: 20px 0 50px -350px
+	max-width: 750px
+	margin: 50px auto
+	text-align: center
 	+display(flex)
 	+justify-content(space-between)
-	+position(absolute, 0 null null 50%)
+	position: relative
 	display: none
+	z-index: 1
 	
 	&.active
 		display: block
@@ -19,7 +25,6 @@
 	
 	.client-face
 		display: inline-block
-		text-align: center
 		
 		.client-img
 			border-radius: 50%
@@ -37,7 +42,6 @@
 			
 	.client-comment
 		display: inline-block
-		width: 450px
 		text-align: center
 		font:
 			size: 18px
@@ -52,11 +56,13 @@
 			path
 				fill: $accent
 
+// -------------------
+// CLIENT CONTROLS
 
 .client-controls
 	+position(absolute, 0 0 0 0)
-	
-	
+	z-index: 2
+		
 	.previous-arrow, .next-arrow
 		+size(40px)
 		
@@ -71,20 +77,62 @@
 		
 	.next-arrow
 		+position(absolute, 50% 0 null null)
+
 		
+// -------------------
+// CLIENT ICON BELT
+
 .client-icon-belt
-	+size(800px 80px)
-	margin: 350px auto 30px
+	max-width: 800px
+	margin: 50px auto 30px
 	+display(flex)
 	+align-items(flex-end)
 	+justify-content(space-between)
 	position: relative	// Them doan nay vao la click dc icon
+	z-index: 3
 	
 	.client-icon
 		cursor: pointer
+		padding-bottom: 10px
+		opacity: 0.5
 		
 		&.active
-			box-shadow: 0px 4px 0px $accent
+			border-bottom: 4px solid $accent
+			opacity: 1
+			
+			
+			
+// -------------------
+// MEDIA
+
+@media (max-width: 750px)
+	
+	.client-icon-belt
+		+flex-wrap(wrap)
+	
+	.client-controls
+		display: none
+	
+	.client-belt 
+		overflow-x: hidden
+		
+		.client-unit.active
+			display: block
+			position: relative
+			margin-left: 0px
+			left: auto
+			
+			
+			.client-face
+				display: block
+				margin: 0 auto
+				
+			.client-comment
+				display: block
+				max-width: 400px
+				margin: 0px auto
+		
+		
 		
 	
 		

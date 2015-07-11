@@ -729,8 +729,9 @@ footer .lockup {
   position: relative; }
 
 .client-unit {
-  width: 700px;
-  margin: 20px 0 50px -350px;
+  max-width: 750px;
+  margin: 50px auto;
+  text-align: center;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -747,15 +748,13 @@ footer .lockup {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: none; }
+  position: relative;
+  display: none;
+  z-index: 1; }
   .client-unit.active {
     display: block; }
   .client-unit .client-face {
-    display: inline-block;
-    text-align: center; }
+    display: inline-block; }
     .client-unit .client-face .client-img {
       border-radius: 50%;
       height: 100px;
@@ -770,7 +769,6 @@ footer .lockup {
       font-size: 12px; }
   .client-unit .client-comment {
     display: inline-block;
-    width: 450px;
     text-align: center;
     font-size: 18px;
     font-weight: 300;
@@ -787,7 +785,8 @@ footer .lockup {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  z-index: 2; }
   .client-controls .previous-arrow, .client-controls .next-arrow {
     height: 40px;
     width: 40px; }
@@ -806,9 +805,8 @@ footer .lockup {
     right: 0; }
 
 .client-icon-belt {
-  height: 80px;
-  width: 800px;
-  margin: 350px auto 30px;
+  max-width: 800px;
+  margin: 50px auto 30px;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -834,8 +832,40 @@ footer .lockup {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  position: relative; }
+  position: relative;
+  z-index: 3; }
   .client-icon-belt .client-icon {
-    cursor: pointer; }
+    cursor: pointer;
+    padding-bottom: 10px;
+    opacity: 0.5; }
     .client-icon-belt .client-icon.active {
-      box-shadow: 0px 4px 0px #c99065; }
+      border-bottom: 4px solid #c99065;
+      opacity: 1; }
+
+@media (max-width: 750px) {
+  .client-icon-belt {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+
+  .client-controls {
+    display: none; }
+
+  .client-belt {
+    overflow-x: hidden; }
+    .client-belt .client-unit.active {
+      display: block;
+      position: relative;
+      margin-left: 0px;
+      left: auto; }
+      .client-belt .client-unit.active .client-face {
+        display: block;
+        margin: 0 auto; }
+      .client-belt .client-unit.active .client-comment {
+        display: block;
+        max-width: 400px;
+        margin: 0px auto; } }
