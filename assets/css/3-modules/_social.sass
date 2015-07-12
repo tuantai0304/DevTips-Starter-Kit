@@ -1,0 +1,37 @@
+.social-section
+	background-color: $bg-color-grey
+
+.social-icon
+	text-align: center
+	max-width: 620px
+	margin: 0 auto 30px
+	+display(flex)
+	+justify-content(space-around)
+	+flex-wrap(wrap)
+	
+	a
+		+size(50px)
+		font-size: 28px
+		line-height: 50px
+		display: block
+		background-color: $bg-color-grey
+		margin: 20px
+		color: $accent
+		border-radius: 50%
+		+transition
+		
+		&:hover
+			+transform(scale(1.2))
+			
+.bar
+	max-width: 400px
+	height: 8px
+	border-top: 4px solid $accent
+	margin: 9px auto
+	
+.biglink
+	display: block
+	text-align: center
+	margin: 20px auto
+	font-size: 72px
+	color: $accent

@@ -358,6 +358,41 @@ td, th {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot"); }
+@font-face {
+  font-family: 'icomoon';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-facebook2:before {
+  content: "\e600"; }
+
+.icon-twitter2:before {
+  content: "\e601"; }
+
+.icon-youtube3:before {
+  content: "\e602"; }
+
+.icon-blogger2:before {
+  content: "\e603"; }
+
+.icon-linkedin:before {
+  content: "\e604"; }
+
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #e1c185;
@@ -886,3 +921,102 @@ footer .lockup {
         display: block;
         max-width: 400px;
         margin: 0px auto; } }
+.social-section {
+  background-color: #e5eaee; }
+
+.social-icon {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .social-icon a {
+    height: 50px;
+    width: 50px;
+    font-size: 28px;
+    line-height: 50px;
+    display: block;
+    background-color: #e5eaee;
+    margin: 20px;
+    color: #c99065;
+    border-radius: 50%;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    .social-icon a:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); }
+
+.bar {
+  max-width: 400px;
+  height: 8px;
+  border-top: 4px solid #c99065;
+  margin: 9px auto; }
+
+.biglink {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 72px;
+  color: #c99065; }
+
+form {
+  max-width: 450px;
+  margin: 0 auto 30px; }
+  form input, form textarea {
+    border: 2px solid #c99065;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    form input:focus, form textarea:focus {
+      border-color: #e1c185;
+      outline: none; }
+  form textarea {
+    height: 10em; }
+  form .submit-wrap {
+    text-align: right; }
+    form .submit-wrap [type="submit"] {
+      background-color: #c99065;
+      color: white;
+      font-size: 18px;
+      text-transform: uppercase;
+      width: 33%; }
+      form .submit-wrap [type="submit"]:hover {
+        background-color: #e1c185; }
+  form .info label {
+    width: 49%;
+    float: left; }
+    form .info label:nth-child(1) {
+      padding-right: 1%; }
+    form .info label:nth-child(2) {
+      padding-left: 1%; }
+  form label {
+    display: block;
+    margin-bottom: 20px; }
+    form label span {
+      display: block; }

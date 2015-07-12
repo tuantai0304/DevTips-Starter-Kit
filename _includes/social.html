@@ -1,0 +1,15 @@
+<section class="social-section">
+	
+	<h3>Contact</h3>
+	
+	<div class="social-icon">
+	{% for item in site.data.portfolio.socials%}
+		<a href="{{ icon.link }}" class="{{ item.icon }}"></a>
+	{% endfor %}
+	</div>
+	
+	<hr class="bar"/>
+	
+	<a class="biglink" href="mailto:ffds">{{site.data.portfolio.email}}</a>
+	
+</section>
